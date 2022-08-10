@@ -12,9 +12,9 @@ int main(void){
   static int sleep=70000; //micro sec
 
   int **cell;
-  cell=malloc(map*sizeof(int*));
+  cell=(int **)malloc(map*sizeof(int*));
   for(int i=0;i<map;i++){
-    cell[i]=malloc(map*sizeof(int));
+    cell[i]=(int *)malloc(map*sizeof(int));
   }
   set_parameter(cell,map);
 

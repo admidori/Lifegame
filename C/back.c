@@ -21,9 +21,9 @@ void set_parameter(int **cell,int map){
 
 int **new_state(int **cell,int map){
   int **new_cell;
-  new_cell=malloc(map*sizeof(int *));
+  new_cell=(int **)malloc(map*sizeof(int *));
   for(int i=0;i<map;i++){
-    new_cell[i]=malloc(map*sizeof(int));
+    new_cell[i]=(int *)malloc(map*sizeof(int));
   }
 
   int sum=0;
